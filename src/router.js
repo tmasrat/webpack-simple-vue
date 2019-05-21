@@ -7,7 +7,7 @@ export function createRouter () {
     return new Router ({
         mode: 'history',
         routes: [
-            {path: '*', components: test}
+            {path: '/test', component: test}
         ]
     })
 

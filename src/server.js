@@ -7,16 +7,21 @@ const server = express();
 
 server.get("*", (req, res) => {
   // console.log(req.headers.referer)
-  const { app, store, App, router } = createApp();
-  // console.log(store)
+  const { app, router } = createApp();
+  // set router's location
+  const print = router.push(req.url);
+  console.log(print);
+
+  router.push(req.url);
+  router.getMatchedComponents();
   // console.log(router.history.current.path);
 
-  App.asyncData(store, router).then(() => {
-    renderer.renderToString(app).then(html => {
-      // console.log(html)
-      res.end(html)
-    })
+  //App.asyncData(store, router).then(() => {
+  renderer.renderToString(app).then(html => {
+    // console.log(html)
+  res.end(html)
   })
+  //})
 });
 
-server.listen(8087, () => console.log("Started server"))
+server.listen(8087, () => console.log("Started server"));
