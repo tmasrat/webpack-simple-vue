@@ -6,7 +6,7 @@
         name: 'Home',
         props: ['body'],
         data(){
-            console.log(`params is ${this.body}`);
+            // console.log(`params is ${this.body}`);
             return {
             }
         }
