@@ -4,8 +4,9 @@ import App from "./Hello.vue"
 import {createRouter} from "./router";
 
 export function createApp(data) {
+    // console.log(data);
   // const store = createStore();
-  const router = createRouter();
+  const router = createRouter(data);
 
   const app = new Vue({
     el: "#app",
@@ -17,7 +18,7 @@ export function createApp(data) {
       }
     })
   });
-  // console.log(router)
+  // console.log(data)
   return { app, router }
 }
 

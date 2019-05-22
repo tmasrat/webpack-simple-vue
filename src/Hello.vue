@@ -1,6 +1,6 @@
 <template>
   <div>
-    Hello World!
+    Hello World! {{ msg }}
     <p>
       <router-link to="/">Go To Home</router-link>
       <router-link to="/test">Go To About</router-link>
@@ -10,7 +10,16 @@
     <!--<div>{{ msg }}</div>-->
   </div>
 </template>
-
+<script>
+    export default {
+        // props: [testData],
+        data () {
+            return {
+                msg: 'Yes'
+            }
+        }
+    }
+</script>
 <!--<script>-->
 <!--const TestVue = () => import(/* webpackChunkName: "below-fold" */ './components/test.vue'); // eslint-disable-line-->
 <!--export default {-->
