@@ -351,3 +351,4 @@ And plenty more. A complex webpack config is daunting, but if you pull it into s
 
 The source code can be found [here](https://github.com/lmiller1990/webpack-simple-vue/tree/basic).
 
+# veoci-email-service
